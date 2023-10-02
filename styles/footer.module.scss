@@ -1,0 +1,143 @@
+.footer {
+
+    padding: 5rem;
+    background-color: rgb(34, 45, 64);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    position: relative;
+
+
+        .wrap_l{
+            display: inline;
+            position: absolute;
+            bottom: 1px;
+            margin-left: 19%;
+
+                .footerend{
+                    bottom: 0 !important;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    
+                    span{
+                        display: inline-block;
+                    }
+
+                    a{
+                        font-size: xx-small;
+                        color: white;
+
+                    }
+                }
+
+
+        }
+
+        .wrap{ 
+            display:inline;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%; 
+            height: 80%;
+
+                .wrapl{ /* Logo */
+                    width: 50%;
+                    height: 80px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-bottom: 1px solid rgb(168, 131, 87);
+
+                }
+
+
+                .wrapr{ /* Contacts */
+                    width: 50%;
+                    height: 80px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    border-bottom: 1px solid rgb(168, 131, 87);
+                    
+                }
+
+
+                .footer_underline{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 30px;
+                }
+
+                .wraplist { /* Список */
+                    
+                    padding: 1rem;
+                    align-items: start;
+
+                    a {
+                        font-size: small;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        color: white;
+                        text-align: left !important;
+                        height: 25px;
+                    }
+
+                    a:hover {
+                        transition-duration: .4s;
+                        color: red;
+                    }
+                } 
+                
+
+                .wrapadr { /* Адресс */
+
+                    
+                    padding: 1rem;
+
+                    p{
+                        text-align: end;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-size: large;
+                        color: white;
+
+                    }
+
+                }
+                
+
+                .logorow{
+                    display: flex;
+
+                    img{
+                        filter: invert(100%); 
+                        -webkit-filter:invert(100%); 
+                    }
+
+                    div{
+                        display: flex;
+                        justify-content: end;
+                    }
+
+                    a {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                }
+
+
+                .buttonrow{
+                    padding: 0.5rem;
+                    margin-top: 10px;
+                }
+
+
+                .buttonrow{
+                   color: rgb(10, 10, 10);
+                }
+
+        }   
+}
+
+

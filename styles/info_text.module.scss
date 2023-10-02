@@ -1,0 +1,70 @@
+.body_left, .body_left_text_block{
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: 
+    "top"
+    "bottom";
+    grid-template-columns: 1fr;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 15% 70% 15%;
+    
+
+    .body_left_text_low {
+    grid-area: top;
+    grid-column: 1;
+    color: rgb(0, 0, 0);
+    display: flex;
+
+  }
+
+  .body_left_text_grid{
+    max-width: 80%;
+    min-width: 80%;
+    min-height: 300px;
+    display: grid;
+    grid-area: bottom;
+    grid-column: 1;
+    grid-template-columns: 1fr 8fr 1fr;
+  }
+
+  .body_left_text_arrow{
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-self: center;
+    align-items: center;
+  }
+
+  .body_left_text_low_info{
+    color: rgb(118, 113, 113);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+  }
+
+
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+
+  .tech_icons{
+    display: flex;
+    gap: 3rem;
+  }
+}

@@ -1,0 +1,16 @@
+.letterSquare {
+    position: relative;
+    
+  
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: -0.2em;
+      width: 2.5em;
+      height: 2.5em;
+      transform: translate(-25%, -60%); // для центрирования фона относительно буквы
+      background-color: rgb(212, 228, 255); // Измените на нужный вам цвет
+    }
+  }
