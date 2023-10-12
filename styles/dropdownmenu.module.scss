@@ -1,0 +1,35 @@
+/* Стили для DropdownMenu */
+.dropdownmenu {
+    height: 500px;
+    width: 200px;
+    background-color: #c90000;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Начально скрываем элемент */
+  }
+  
+  /* Стили для списка в DropdownMenu */
+  .dropdownmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Стили для ссылок в списке */
+  .dropdownmenu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  /* Стили для ссылок при наведении */
+  .dropdownmenu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Показываем DropdownMenu, когда он активен */
+  .dropdownmenu.active {
+    display: block;
+  }

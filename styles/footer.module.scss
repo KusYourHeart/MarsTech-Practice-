@@ -3,8 +3,6 @@
     padding: 5rem;
     background-color: #b5b8be;
     display: block;
-    justify-content: center;
-    align-items: center;
     height: 100%; 
     position: relative;
 
@@ -27,7 +25,7 @@
 
                     a{
                         font-size: xx-small;
-                        color: white;
+                        color: rgb(0, 0, 0);
 
                     }
                 }
@@ -37,10 +35,7 @@
 
         .wrap{ 
             display:inline;
-            justify-content: space-between;
-            align-items: center;
-            width: 60%; 
-            height: 80%;
+            
 
                 .wrapl{ /* Logo */
                     width: 50%;
@@ -48,7 +43,7 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    border-bottom: 1px solid rgb(168, 131, 87);
+                    border-bottom: 1px solid rgb(35, 35, 35);
 
                 }
 
@@ -59,7 +54,11 @@
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
-                    border-bottom: 1px solid rgb(168, 131, 87);
+                    border-bottom: 1px solid rgb(35, 35, 35);
+
+                    img {
+                        filter: brightness(80%) invert(1);
+                    }
                     
                 }
 
@@ -75,12 +74,14 @@
                     padding: 1rem;
                     align-items: start;
 
+                   
+
                     a {
                         font-size: small;
                         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                        color: white;
+                        color: rgb(25, 24, 24);
                         text-align: left !important;
-                        height: 25px;
+                        height: 30px;
                     }
 
                     a:hover {
@@ -99,7 +100,8 @@
                         text-align: end;
                         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                         font-size: large;
-                        color: white;
+                        color: rgb(53, 53, 53);
+                        height: 17px;
 
                     }
 
@@ -108,21 +110,27 @@
 
                 .logorow{
                     display: flex;
+                    margin-top: 10px;
 
-                    img{
-                        filter: invert(100%); 
-                        -webkit-filter:invert(100%); 
+                    img {
+                       
                     }
+
+                   
 
                     div{
                         display: flex;
                         justify-content: end;
                     }
 
+                
+
                     a {
                         width: 24px;
                         height: 24px;
                     }
+                    
+                   
 
                 }
 
@@ -140,4 +148,299 @@
         }   
 }
 
+@media screen and (max-width: 1367px) {
+    .wrap_l{
+        margin-left: 3% !important;
+    }
+}
 
+@media screen and (max-width: 1250px) {
+    
+    .footer {
+    
+    .wrap_l{
+        margin-left: 5% !important;
+    }
+
+    .wrap{ 
+
+        .wraplist {
+            width: 50%;
+        }
+
+        .wrapadr {
+            width: 45%;
+        }
+
+    }
+}
+
+}
+
+@media screen and (max-width: 857px) { 
+
+    .footer {
+
+        padding: 4rem;
+    
+        .wrap_l{
+            margin-left: 1% !important;
+        }
+    
+        .wrap{ 
+
+            .container {
+                max-width: 650px !important;
+            }
+
+            .wraplist {
+
+                width: 58%;
+
+                a {
+                    display: flex;
+                    font-size: 10px;
+                    text-align: left !important;
+                    height: 30px;
+                    align-items: center;
+                }
+            }
+    
+            .wrapadr {
+
+                width: 42%;
+                
+                padding: 1rem;
+
+                    p{
+                        text-align: end;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-size: 12px;
+                        color: rgb(32, 32, 32);
+                        height: 13px;
+
+                    }
+                }
+
+                .logorow{
+
+                    a {
+                        margin-top: 10px;
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                }
+    
+        }
+    }
+}
+
+@media screen and (max-width: 857px) { 
+    .footer {
+
+        padding: 5rem;
+        display: block;
+        height: 100%; 
+        position: relative;
+    
+    
+            .wrap_l{
+                display: inline;
+                position: absolute;
+                bottom: 1px;
+                margin-left: 19%;
+    
+                    .footerend{
+                        bottom: 0 !important;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        
+                        span{
+                            display: inline-block;
+                        }
+    
+                        a{
+                            font-size: xx-small;
+                            color: rgb(0, 0, 0);
+    
+                        }
+                    }
+    
+    
+            }
+    
+            .wrap{ 
+                display:inline;
+                
+    
+                    .wrapl{ /* Logo */
+                        width: 50%;
+                        height: 80px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+    
+                    }
+    
+    
+                    .wrapr{ /* Contacts */
+                        width: 50%;
+                        height: 80px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        
+                    }
+    
+    
+                    .footer_underline{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 30px;
+                    }
+    
+                    .wraplist { /* Список */
+                        
+                        padding: 1rem;
+                        align-items: start;
+    
+                       
+    
+                        a {
+                            font-size: small;
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            color: white;
+                            text-align: left !important;
+                            height: 30px;
+                        }
+    
+                        a:hover {
+                            transition-duration: .4s;
+                            color: red;
+                        }
+                    } 
+                    
+    
+                    .wrapadr { /* Адресс */
+    
+                        
+                        padding: 1rem;
+    
+                        p{
+                            text-align: end;
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            font-size: large;
+                            color: rgb(32, 32, 32);
+                            height: 17px;
+    
+                        }
+    
+                    }
+                    
+    
+                    .logorow{
+                        display: flex;
+    
+                        img{
+                            filter: invert(100%); 
+                            -webkit-filter:invert(100%); 
+                        }
+    
+                        div{
+                            display: flex;
+                            justify-content: end;
+                        }
+    
+                        a {
+                            width: 24px;
+                            height: 24px;
+                        }
+    
+                    }
+    
+    
+                    .buttonrow{
+                        padding: 0.5rem;
+                        margin-top: 10px;
+                    }
+    
+    
+                    .buttonrow{
+                       color: rgb(10, 10, 10);
+                    }
+    
+            }   
+    }
+}
+
+        @media screen and (max-width: 766px) { 
+            
+            .footer {
+                padding: 0rem;
+
+
+                .wrap_l{
+                    bottom: 1px;
+                    right: 22px;
+                }
+    
+
+                .wrap{ 
+                    
+        
+                    
+        
+                        .wrapr{ /* Contacts */
+                            display: none;
+                        }
+        
+        
+                        .footer_underline{
+                            display: block;
+                        }
+
+
+                        .wraplist { /* Список */
+                    
+                            padding: 1rem;
+                            width: 100%;
+        
+                           
+        
+                            a {
+                                font-size: small;
+                                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                color: rgb(0, 0, 0);
+                                text-align: left !important;
+                                height: 30px;
+                            }
+        
+                            a:hover {
+                                transition-duration: .4s;
+                                color: red;
+                            }
+                        } 
+
+
+                        .wrapadr { /* Адресс */
+                            padding: 1rem;
+                            width: 100%;
+                        }
+
+
+            }
+        }
+
+        }
+
+        @media screen and (max-width: 1921px) { 
+          
+            .footer {
+          
+            .wrap_l{
+                margin-left: 12%;
+            }
+        }
+        }

@@ -89,7 +89,7 @@ function MyComponent() {
                                         </div>
                                         <div className = {styles.cv2_card_line}></div>
                                         <div className = {styles.cv2_card_text}>
-                                            <div className = {styles.cv2_card_header}>Solution for infrastructure</div>
+                                            <div className = {styles.cv2_card_header}>Infrastructure</div>
                                             <div className = {styles.cv2_card_content}><p>Creating an IT infrastructure from scratch, changing and optimizing the current information system.</p></div>
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@ function MyComponent() {
                                         </div>
                                         <div className = {styles.cv2_card_line}></div>  
                                         <div className = {styles.cv2_card_text}>
-                                            <div className = {styles.cv2_card_header}>Data protection and recovery</div>
+                                            <div className = {styles.cv2_card_header}>Data protection</div>
                                             <div className = {styles.cv2_card_content}> <p> Recovery and protection of corporate data, risk assessment, implementation of security systems, backups, monitoring. </p></div>
                                         </div>
                                     </div>

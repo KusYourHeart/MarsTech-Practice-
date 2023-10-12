@@ -49,7 +49,9 @@ const Footer = () => (
     
                 <div className={`${styles.wrapadr} col-6 col-md-4`}>
                     <div className="row"><p>  Dubai, UAE</p></div>
-                    <div className="row"><p>14th Floor, Westburry Office, Business Bay</p></div>
+                    <div className="row"><p>Tecom, Tameem House 1403 office</p></div>
+                    <div className="row"><p>sn@marstech.ae</p></div>
+                    <div className="row"><p>+971585973003</p></div>
                     <div className={`${styles.logorow} row`}>
                         <div className="col"><a href=""><Image src="/logo/email.png" width={24} height={24} alt="EmailLogo" /></a></div>
                         <div className="col"><a href=""><Image src="/logo/facebook.png" width={24} height={24} alt="FBLogo" /></a></div>
