@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/features/Mailer.js", "components/features/ModalEmail.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/features/Mailer.js", "components/features/ModalEmail.tsx"],
   "exclude": ["node_modules"]
 }
