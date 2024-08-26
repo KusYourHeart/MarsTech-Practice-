@@ -6,47 +6,59 @@ import styles from '@/styles/email.module.scss';
 
 function Email() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const validateForm = () => {
+    let isValid = true;
 
-
-    const recipientEmail = 'iiwonderwhyii@gmail.com';
-    // Ваша логика отправки данных, например, используя fetch или axios.
-    const data = { email, message, recipientEmail };
-
-    // Отправка данных на сервер
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        
-      }); 
-
-      if (response.ok) {
-        // Успешная отправка
-        alert('Сообщение успешно отправлено');
-        handleClose();
-      } else {
-        // Ошибка при отправке
-        alert('Произошла ошибка при отправке сообщения');
-      }
-    } catch (error) {
-      console.error('Произошла ошибка:', error);
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      setEmailError('Введите корректный адрес электронной почты.');
+      isValid = false;
+    } else {
+      setEmailError('');
     }
+
+    if (!message || message.length < 10) {
+      setMessageError('Сообщение должно содержать не менее 10 символов.');
+      isValid = false;
+    } else {
+      setMessageError('');
+    }
+
+    return isValid;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
+
+    const response = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, message }),
+    });
+
+    const result = await response.json();
+    if (result.status === 'Success') {
+      alert('Сообщение отправлено успешно');
+    } else {
+      alert('Ошибка при отправке сообщения');
+    }
+
+    handleClose();
   };
 
   return (
-
-    
     <>
-
-    
       <Button variant="" onClick={handleShow} className="btn btn-outline-dark">
         Contact us
       </Button>
@@ -65,7 +77,9 @@ function Email() {
                 autoFocus
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                isInvalid={!!emailError}
               />
+              <Form.Control.Feedback type="invalid">{emailError}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group
               className="mb-3"
@@ -77,16 +91,18 @@ function Email() {
               rows={3}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              isInvalid={!!messageError}
               />
+              <Form.Control.Feedback type="invalid">{messageError}</Form.Control.Feedback>
             </Form.Group>
+            <Button type="submit" variant="primary" onClick={handleSubmit}>
+              Send
+            </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer className={styles.card_color}>
           <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleSubmit}>
-            Send
           </Button>
         </Modal.Footer>
       </Modal>
